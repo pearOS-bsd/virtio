@@ -1,4 +1,6 @@
-# virtio_gpu for FreeBSD
+# pearOS Generic GPU Driver (virtio)
+
+`virtio_gpu` for FreeBSD (the module and DRM driver name stay `virtio_gpu`; the description it reports is "pearOS Generic GPU Driver (virtio)").
 
 A port of Linux's `virtio_gpu` DRM driver (6.1.128) to FreeBSD 14 through LinuxKPI, so that `/dev/dri/card0` and `renderD128` exist on a QEMU `virtio-vga` / `virtio-vga-gl` (virgl) and Mesa's `virgl` driver can accelerate OpenGL in a VM. Used by [pearOS](https://github.com/pearOS-bsd/misc) (`wsd`, the window server).
 

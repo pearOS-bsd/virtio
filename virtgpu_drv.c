@@ -162,7 +162,7 @@ static struct virtio_driver virtio_gpu_driver = {
 module_virtio_driver(virtio_gpu_driver);
 
 MODULE_DEVICE_TABLE(virtio, id_table);
-MODULE_DESCRIPTION("Virtio GPU driver");
+MODULE_DESCRIPTION("pearOS Generic GPU Driver (virtio)");
 MODULE_LICENSE("GPL and additional rights");
 MODULE_AUTHOR("Dave Airlie <airlied@redhat.com>");
 MODULE_AUTHOR("Gerd Hoffmann <kraxel@redhat.com>");
