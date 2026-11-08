@@ -45,7 +45,7 @@
 #include <drm/virtgpu_drm.h>
 
 #define DRIVER_NAME "virtio_gpu"
-#define DRIVER_DESC "virtio GPU"
+#define DRIVER_DESC "pearOS Generic GPU Driver (virtio)"
 #define DRIVER_DATE "0"
 
 #define DRIVER_MAJOR 0
