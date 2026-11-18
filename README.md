@@ -2,7 +2,7 @@
 
 `virtio_gpu` for FreeBSD (the module and DRM driver name stay `virtio_gpu`; the description it reports is "pearOS Generic GPU Driver (virtio)").
 
-A port of Linux's `virtio_gpu` DRM driver (6.1.128) to FreeBSD 14 through LinuxKPI, so that `/dev/dri/card0` and `renderD128` exist on a QEMU `virtio-vga` / `virtio-vga-gl` (virgl) and Mesa's `virgl` driver can accelerate OpenGL in a VM. Used by [pearOS](https://github.com/pearOS-bsd/misc) (`wsd`, the window server).
+A port of Linux's `virtio_gpu` DRM driver (6.1.128) to FreeBSD 14 through LinuxKPI, so that `/dev/dri/card0` and `renderD128` exist on a QEMU `virtio-vga` / `virtio-vga-gl` (virgl) and Mesa's `virgl` driver can accelerate OpenGL in a VM. Used by [pearOS](https://github.com/pearOS-bsd/misc) (`WindowServer`, the window server).
 
 Status, honestly: it works (KMS display, hotplug/resize, GL through virgl renders pixel-identical to llvmpipe in the test of `wsbsd/test/glcmp.c`), but with GL on virgl and the dumb-buffer scan-out each frame is read back, so it is **slower than a software compositor** in the VM we measured (39 against 65 FPS, 1080p, 8 glass windows). Zero-copy scan-out would need PRIME import and blob resources, which are missing. See `PORTING.md` (design, milestone log and "Corrections").
 
